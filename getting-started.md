@@ -17,10 +17,9 @@ $ exo --version
 As of this writing Exosuit can:
 
 - Launch an EC2 instance
-- Install Ruby and nginx on an EC2 instance
+- SSH into an EC2 instance
 - Terminate EC2 instances
 - List EC2 instances
-- SSH into an EC2 instance
 
 Exosuit does not yet do anything to do with installing Rails, although that of course is in the plans.
 
@@ -31,30 +30,23 @@ You can launch an EC2 instance by using the `launch` command:
 $ exo launch
 ```
 
-The `launch` command will create a new key pair for you (unless one already exists) inside the `~/.ssh` and associate that keypair with your new EC2 instance.
+Within a few seconds, your EC2 instance will be ready.
 
-Within a few seconds, your EC2 instance will be ready and Exosuit will show you the public DNS for that instance.
+### SSHing into your EC2 instance
 
-### Listing your EC2 instances
-
-You can check on your EC2 instance by running the `instances` command, which will list the public DNS names for any running EC2 instances you have.
-
-```shell
-$ exo instances
-```
-
-To see all your instances, not just running instances, use `instances:all`:
-
-```shell
-$ exo instances:all
-```
-
-### SSHing into your EC2 instances
-
-You can SSH into an EC2 instance by running the `ssh` command. You will be given a prompt to select which instances to SSH into.
+The next thing you might want to do is SSH into the instance you just created.
+You can do that like this:
 
 ```shell
 $ exo ssh
+```
+
+### Listing your EC2 instances
+
+Want to see all the instances you've launched? Run this command.
+
+```shell
+$ exo instances
 ```
 
 ## Terminating an EC2 instance
@@ -65,7 +57,8 @@ To terminate an instance, run:
 $ exo terminate
 ```
 
-You will be given a prompt of all your running instances. You can select any number of instances to terminate.
+You will be given a prompt of all your running instances.
+You can select any number of instances to terminate.
 
 ## Getting help
 
@@ -77,10 +70,8 @@ Usage:
 
 These are the commands you can use:
   launch                 Launch a new EC2 instance
+  ssh                    SSH into an EC2 instance
   terminate              Terminate an EC2 instance
   instances              Show a summary of all running EC2 instances
   instances:all          Show a summary of EC2 instances (all states)
-  dns                    List public DNS names for all EC2 instances
-  ssh                    SSH into an EC2 instance
-  initialize             Install Ruby and nginx on an instance
 ```
