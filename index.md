@@ -1,8 +1,12 @@
 ---
+title: Exosuit - Painless AWS-Rails Deployment
 layout: home
 ---
 
-Welcome to the Exosuit documentation.
+Exosuit is a tool that aims to make deploying Rails to AWS
+as easy as deploying Rails to Heroku.
 
-I recommend starting with the
+## Getting Started
+
+Want to give Exosuit a spin? Check out the
 [Getting Started with Exosuit]({% link getting-started.md %}) guide.
