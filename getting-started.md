@@ -3,6 +3,10 @@ title: Getting Started with Exosuit
 ---
 
 ## Installation
+
+The [Exosuit CLI]({% link exosuit-cli.md %}) currently only works on macOS.
+The Exosuit CLI can be installed using [Homebrew](https://brew.sh/).
+
 ```shell
 $ brew tap jasonswett/exosuit && brew install exosuit
 $ exo --version
