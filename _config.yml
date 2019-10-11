@@ -41,6 +41,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-baseurl: /exosuit-documentation
-url: http://exosuit-docs.github.io
